@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Testing File Input</title>
+        <style>
+            textarea {
+                width: 100%;
+                height: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Testing File Input</h1>
+        <div id="divFileInput">
+            <label for="fileInput">Select a file to read:</label>
+            <input type="file" id="fileInput"/>
+        </div>
+
+        <div>
+            <label>Read Options:</label>
+            <div id="dataReadOptions">
+                <label class="radio-inline">
+                    <input type="radio" name="readType" value="readAsArrayBuffer"> readAsArrayBuffer
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="readType" value="readAsBinaryString"> readAsBinaryString
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="readType" value="readAsDataURL"> readAsDataURL
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="readType" value="readAsText" checked="checked"> readAsText
+                </label>
+            </div>
+        </div>
+
+        <label>Formatting Options:</label>
+        <div id="dataFormattingOptions">
+            <label class="radio-inline">
+                <input type="radio" name="formatType" value="-1" checked="checked"> Raw
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="formatType" value=""> toString()
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="formatType" value="base64"> toString("base64")
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="formatType" value="hex"> toString("hex")
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="formatType" value="ascii"> toString("ascii")
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="formatType" value="utf8"> toString("utf8")
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="formatType" value="arrayBuffer"> arrayBuffer
+            </label>
+        </div>
+
+        <hr/>
+
+        <h2>Results</h2>
+        <div>
+            <label for="results">Data:</label>
+            <textarea id="results"></textarea>
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+            crossorigin="anonymous"></script>
+        <script src="client.js"></script>
+    </body>
+</html>
